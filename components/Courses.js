@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { branches, subscriptions, tl, packagePrice, subPrice, HOURLY } from "@/lib/data";
+import VideoLessons from "@/components/VideoLessons";
 
 export default function Courses() {
   const [branch, setBranch] = useState("amerikan");
@@ -65,7 +66,7 @@ export default function Courses() {
       <section id="abonelik" className="band">
         <div className="wrap">
           <h2>Aylık abonelik</h2>
-          <p className="lede">Kursu bitirdin ama oynamaya devam mı? Her ay ders hakkın yenilenir, istediğin branşta kullanırsın. İstediğin ay bırakırsın.</p>
+          <p className="lede">Kursu bitirdin ama oynamaya devam mı? Her ay ders hakkın yenilenir, istediğin branşta kullanırsın. Video derslere erişim de dahil. İstediğin ay bırakırsın.</p>
           <div className="subs">
             {subscriptions.map((s) => (
               <div key={s.key} className="sub">
@@ -78,6 +79,8 @@ export default function Courses() {
           </div>
         </div>
       </section>
+
+      <VideoLessons onSubscribe={() => pick("Abonelik – Ayda 4 ders")} />
 
       <section id="rezervasyon" className="wrap form-wrap">
         <h2>Ders ayarla</h2>

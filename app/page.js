@@ -11,6 +11,7 @@ export default function Home() {
           <div className="links">
             <a href="#kurslar">Kurslar</a>
             <a href="#abonelik">Abonelik</a>
+            <a href="#videolar">Video dersler</a>
             <a href="#rezervasyon">Ders ayarla</a>
           </div>
         </nav>

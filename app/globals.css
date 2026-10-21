@@ -63,6 +63,19 @@ section { scroll-margin-top: 20px; }
 .sub-price strong { font-size: 2rem; font-stretch: 75%; color: #fff; }
 
 .form-wrap { padding-top: 72px; padding-bottom: 88px; }
+
+.videos { padding-top: 80px; }
+.video-grid { list-style: none; padding: 0; margin: 32px 0 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px 20px; }
+.thumb { position: relative; aspect-ratio: 16 / 9; border-radius: 10px; overflow: hidden;
+  background: radial-gradient(circle at 70% 40%, #1A7D58 0%, var(--felt) 45%, var(--felt-dark) 100%); border: 6px solid var(--rail); }
+.play { position: absolute; left: 50%; top: 50%; width: 46px; height: 46px; margin: -23px 0 0 -23px; border-radius: 50%; background: rgba(255,255,255,.92); }
+.play::after { content: ""; position: absolute; left: 18px; top: 13px; border-left: 14px solid var(--felt-dark); border-top: 10px solid transparent; border-bottom: 10px solid transparent; }
+.dur { position: absolute; right: 6px; bottom: 6px; background: rgba(0,0,0,.7); color: #fff; font-size: .8rem; padding: 2px 6px; border-radius: 4px; }
+.lock { position: absolute; left: 6px; top: 6px; background: var(--rail); color: #fff; font-size: .78rem; font-weight: 600; padding: 3px 8px; border-radius: 4px; }
+.video-meta { color: var(--muted); font-size: .9rem; margin: 12px 0 2px; }
+.video h3 { font-size: 1.25rem; margin: 0; }
+.video-cta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); }
+.video-cta p { margin: 0; color: var(--muted); }
 .form { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; max-width: 760px; margin-top: 24px; }
 .form label { display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: .95rem; }
 .form .full { grid-column: 1 / -1; }
@@ -77,6 +90,8 @@ input:focus, select:focus, textarea:focus { border-color: var(--chalk); outline:
 
 @media (max-width: 860px) {
   .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+  .video-grid { grid-template-columns: 1fr 1fr; gap: 24px 14px; }
+  .video h3 { font-size: 1.05rem; }
   .levels { grid-template-columns: 1fr; }
   .level { border-right: 0; border-bottom: 1px solid var(--line); }
   .subs { grid-template-columns: 1fr; }
