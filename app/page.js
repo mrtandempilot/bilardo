@@ -25,9 +25,17 @@ export default function Home() {
       </header>
 
       <section className="wrap about">
-        <h2>Eğitmen</h2>
-        <p><strong>{site.instructor}</strong> ile her ders birebir. [Buraya eğitmenin deneyimi, oynadığı turnuvalar ve öğretme yaklaşımı gelecek.]</p>
+        <img src="/img/masa.jpg" alt="Istakayla beyaz topa nişan alan bir oyuncu" className="about-img" />
+        <div>
+          <h2>Eğitmen</h2>
+          <p><strong>{site.instructor}</strong> ile her ders birebir. [Buraya eğitmenin deneyimi, oynadığı turnuvalar ve öğretme yaklaşımı gelecek.]</p>
+        </div>
       </section>
+
+      <div className="wrap strip">
+        <img src="/img/toplar.jpg" alt="Masada üçgene dizilmiş renkli bilardo topları" />
+        <img src="/img/amerikan.jpg" alt="Amerikan bilardo masasında 8 numaralı top" />
+      </div>
 
       <Courses />
 
