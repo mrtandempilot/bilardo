@@ -9,16 +9,16 @@ export default function VideoLessons({ onSubscribe }) {
   const tabs = [["hepsi", "Hepsi"], ...Object.entries(branches).map(([k, v]) => [k, v.label])];
 
   return (
-    <section id="videolar" className="wrap videos">
+    <section id="online" className="wrap videos">
       <div className="head">
-        <h2>Video dersler</h2>
-        <div className="toggle" role="tablist" aria-label="Videoları filtrele">
+        <h2>Online dersler</h2>
+        <div className="toggle" role="tablist" aria-label="Online dersleri filtrele">
           {tabs.map(([k, label]) => (
             <button key={k} role="tab" aria-selected={filter === k} onClick={() => setFilter(k)}>{label}</button>
           ))}
         </div>
       </div>
-      <p className="lede">Abonelere özel. Derste çalıştığın vuruşları evde tekrar izle, bir sonraki derse hazır gel. Her ay yeni video eklenir.</p>
+      <p className="lede">Abonelere özel. Derste çalıştığın vuruşları evde tekrar izle, bir sonraki derse hazır gel. Her ay yeni ders eklenir.</p>
 
       <ul className="video-grid">
         {list.map((v) => (
@@ -35,8 +35,8 @@ export default function VideoLessons({ onSubscribe }) {
       </ul>
 
       <div className="video-cta">
-        <p>Videolara erişim her iki abonelik paketine dahil.</p>
-        <button className="btn" onClick={onSubscribe}>Abone ol, videoları aç</button>
+        <p>Online derslere erişim her iki abonelik paketine dahil.</p>
+        <button className="btn" onClick={onSubscribe}>Abone ol, online dersleri aç</button>
       </div>
     </section>
   );

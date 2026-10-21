@@ -66,7 +66,7 @@ export default function Courses() {
       <section id="abonelik" className="band">
         <div className="wrap">
           <h2>Aylık abonelik</h2>
-          <p className="lede">Kursu bitirdin ama oynamaya devam mı? Her ay ders hakkın yenilenir, istediğin branşta kullanırsın. Video derslere erişim de dahil. İstediğin ay bırakırsın.</p>
+          <p className="lede">Kursu bitirdin ama oynamaya devam mı? Her ay ders hakkın yenilenir, istediğin branşta kullanırsın. Online derslere erişim de dahil. İstediğin ay bırakırsın.</p>
           <div className="subs">
             {subscriptions.map((s) => (
               <div key={s.key} className="sub">
