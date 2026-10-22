@@ -19,7 +19,7 @@ function YouTubeCard({ v, member }) {
           />
         ) : (
           <button className="yt-cover" onClick={() => setPlaying(true)} aria-label={`${v.title} videosunu oynat`}>
-            <img src={`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`} alt="" loading="lazy" />
+            <img src={`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`} alt={`${v.title} – bilardo dersi videosu`} loading="lazy" />
             <span className="play" />
             <span className="free">{member ? "Abone" : "Ücretsiz"}</span>
           </button>

@@ -10,6 +10,7 @@ import Testimonials from "@/components/Testimonials";
 import Faq from "@/components/Faq";
 import BookingForm from "@/components/BookingForm";
 import Footer from "@/components/Footer";
+import { structuredData } from "@/lib/seo";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         <BookingForm />
       </main>
       <Footer />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData()) }} />
     </>
   );
 }

@@ -19,10 +19,11 @@ export default function Hero() {
           <div className="hero-badge">
             <span className="badge-pulse"></span>
             <Sparkles size={14} className="badge-sparkle" />
-            <span>Fethiye’de birebir bilardo dersleri</span>
+            <span>TBF lisanslı antrenör · Birebir özel ders</span>
           </div>
 
           <h1 className="hero-title">
+            <span className="hero-kicker">Fethiye Bilardo Dersi ve Kursu</span>
             Bilardoyu Şansa Değil, <span className="text-gold-gradient">Geometri ve Fiziğe</span> Bırak.
           </h1>
 
