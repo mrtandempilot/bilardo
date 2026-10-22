@@ -34,6 +34,16 @@ export default function AuthProvider({ children }) {
     return () => sub.subscription.unsubscribe();
   }, [loadAbonelik]);
 
+  // /#giris veya /#hesabim ile gelinirse pencereyi aç
+  useEffect(() => {
+    if (!ready) return;
+    const h = window.location.hash;
+    if (h === "#giris" || h === "#hesabim") {
+      setModal(h === "#hesabim" && user ? "hesap" : "giris");
+      history.replaceState(null, "", window.location.pathname);
+    }
+  }, [ready, user]);
+
   const aktifAbone = !!abonelik && abonelik.bitis >= today();
 
   const value = {

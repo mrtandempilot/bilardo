@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <header className={`nav-header ${scrolled ? "nav-scrolled" : ""}`}>
       <div className="wrap nav-inner">
-        <a href="#" className="brand-logo" aria-label="Ana sayfa">
+        <a href="/" className="brand-logo" aria-label="Ana sayfa">
           <div className="logo-ball-icon">
             <span className="logo-cue-ring"></span>
             <span className="logo-dot"></span>
@@ -34,16 +34,16 @@ export default function Navbar() {
 
         {/* Desktop Links */}
         <nav className="desktop-nav" aria-label="Ana menü">
-          <a href="#simulator" className="nav-link">
+          <a href="/#simulator" className="nav-link">
             <Target size={15} className="nav-icon-highlight" />
             Vuruş Simülatörü
           </a>
-          <a href="#kurslar" className="nav-link">Kurslar & Branşlar</a>
-          <a href="#abonelik" className="nav-link">Abonelik</a>
-          <a href="#egitmen" className="nav-link">Eğitmen & Salon</a>
-          <a href="#online" className="nav-link">Video Dersler</a>
-          <a href="#drills" className="nav-link">Antrenmanlar</a>
-          <a href="#sss" className="nav-link">SSS</a>
+          <a href="/#kurslar" className="nav-link">Kurslar & Branşlar</a>
+          <a href="/#abonelik" className="nav-link">Abonelik</a>
+          <a href="/#egitmen" className="nav-link">Eğitmen & Salon</a>
+          <a href="/#online" className="nav-link">Video Dersler</a>
+          <a href="/#drills" className="nav-link">Antrenmanlar</a>
+          <a href="/#sss" className="nav-link">SSS</a>
         </nav>
 
         {/* Action Buttons */}
@@ -69,7 +69,7 @@ export default function Navbar() {
               <span className="hide-mobile">Giriş yap</span>
             </button>
           )}
-          <a href="#rezervasyon" className="btn-primary-sm hide-mobile">
+          <a href="/#rezervasyon" className="btn-primary-sm hide-mobile">
             <span>Ders Ayarla</span>
           </a>
           <button
@@ -86,18 +86,18 @@ export default function Navbar() {
       {mobileOpen && (
         <div className="mobile-dropdown">
           <div className="wrap mobile-links">
-            <a href="#simulator" onClick={() => setMobileOpen(false)}>🎯 Açı & Vuruş Simülatörü</a>
-            <a href="#kurslar" onClick={() => setMobileOpen(false)}>🎱 Kurslar & Müfredat</a>
-            <a href="#abonelik" onClick={() => setMobileOpen(false)}>⭐ Aylık VIP Abonelik</a>
-            <a href="#egitmen" onClick={() => setMobileOpen(false)}>🏆 Eğitmen & Salon</a>
-            <a href="#online" onClick={() => setMobileOpen(false)}>▶️ Online Video Arşivi</a>
-            <a href="#drills" onClick={() => setMobileOpen(false)}>📋 Antrenman Egzersizleri</a>
-            <a href="#test" onClick={() => setMobileOpen(false)}>🧭 Seviye Belirleme Testi</a>
-            <a href="#sss" onClick={() => setMobileOpen(false)}>❓ Sık Sorulan Sorular</a>
+            <a href="/#simulator" onClick={() => setMobileOpen(false)}>🎯 Açı & Vuruş Simülatörü</a>
+            <a href="/#kurslar" onClick={() => setMobileOpen(false)}>🎱 Kurslar & Müfredat</a>
+            <a href="/#abonelik" onClick={() => setMobileOpen(false)}>⭐ Aylık VIP Abonelik</a>
+            <a href="/#egitmen" onClick={() => setMobileOpen(false)}>🏆 Eğitmen & Salon</a>
+            <a href="/#online" onClick={() => setMobileOpen(false)}>▶️ Online Video Arşivi</a>
+            <a href="/#drills" onClick={() => setMobileOpen(false)}>📋 Antrenman Egzersizleri</a>
+            <a href="/#test" onClick={() => setMobileOpen(false)}>🧭 Seviye Belirleme Testi</a>
+            <a href="/#sss" onClick={() => setMobileOpen(false)}>❓ Sık Sorulan Sorular</a>
             <button className="mobile-auth-btn" onClick={() => { setMobileOpen(false); user ? openAccount() : openAuth("giris"); }}>
               <UserRound size={17} /> {user ? "Hesabım" : "Giriş yap / Üye ol"}
             </button>
-            <a href="#rezervasyon" className="btn btn-gold btn-block mobile-book" onClick={() => setMobileOpen(false)}>Ders Ayarla</a>
+            <a href="/#rezervasyon" className="btn btn-gold btn-block mobile-book" onClick={() => setMobileOpen(false)}>Ders Ayarla</a>
             <div className="mobile-contact-bar">
               <a href={`tel:${site.phone.replace(/[^0-9+]/g, "")}`} className="mobile-contact-btn">
                 <Phone size={16} /> {site.phone}

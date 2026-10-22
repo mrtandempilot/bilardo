@@ -27,7 +27,7 @@ export default function Footer() {
           <p>{site.workingHours}</p>
         </div>
       </div>
-      <div className="wrap foot-bottom">© {year} {site.name}</div>
+      <div className="wrap foot-bottom">© {year} {site.name} · <a href="/gizlilik">Gizlilik politikası</a></div>
 
       <a className="wa-float" href={`https://wa.me/${site.whatsapp}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp’tan yaz">
         <MessageCircle size={26} />

@@ -515,3 +515,9 @@ input:focus, select:focus, textarea:focus { border-color: var(--gold); outline: 
 .foot .foot-social { gap: 16px; margin-top: 14px; }
 .foot-social a { display: inline-flex; align-items: center; gap: 6px; }
 .foot-social svg { color: var(--gold); }
+.legal { padding-top: calc(var(--nav-h) + 56px); }
+.prose { max-width: 760px; }
+.prose h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); }
+.prose h2 { font-size: 1.5rem; margin-top: 1.6em; }
+.prose p { color: #C9D5CE; }
+.foot-bottom a:hover { color: var(--gold); }
