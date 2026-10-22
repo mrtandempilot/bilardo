@@ -23,7 +23,7 @@ export default function Footer() {
         </div>
         <div>
           <h4>Adres</h4>
-          <p><MapPin size={15} /> {site.address}</p>
+          <p><MapPin size={15} /> <a href={site.mapsUrl} target="_blank" rel="noopener noreferrer">{site.address}</a></p>
           <p>{site.workingHours}</p>
         </div>
       </div>
