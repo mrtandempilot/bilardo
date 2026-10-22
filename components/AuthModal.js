@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { X, Mail, Lock, LogOut, Star, CalendarDays, CheckCircle2 } from "lucide-react";
+import { X, Mail, Lock, LogOut, Star, CalendarDays, CheckCircle2, LayoutDashboard } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/components/AuthProvider";
 import { pickPackage } from "@/lib/pick";
@@ -30,7 +30,7 @@ function GoogleIcon() {
 }
 
 function Hesap() {
-  const { user, abonelik, aktifAbone, signOut, closeModal } = useAuth();
+  const { user, abonelik, aktifAbone, isAdmin, signOut, closeModal } = useAuth();
   const ad = user.user_metadata?.full_name || user.user_metadata?.name;
   const tarih = (d) => new Date(d + "T00:00:00").toLocaleDateString("tr-TR", { day: "numeric", month: "long", year: "numeric" });
   return (
@@ -60,6 +60,7 @@ function Hesap() {
       </div>
 
       <div className="auth-actions">
+        {isAdmin && <a href="/yonetim" className="btn btn-ghost btn-block"><LayoutDashboard size={16} /> Yönetim paneli</a>}
         {aktifAbone ? (
           <a href="#online" className="btn btn-gold btn-block" onClick={closeModal}>Video derslere git</a>
         ) : (

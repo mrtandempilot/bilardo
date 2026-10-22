@@ -17,6 +17,11 @@ Yorumlar bölümü: `lib/data.js` içindeki örnek yorumlar `ornek: true` olduğ
 - Abone eklemek: Supabase → Table editor → aboneler → email (küçük harf), paket, bitis.
 - Ayarlar `.env.local` içinde (NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY). Vercel'de de aynı iki değişkeni ekle.
 
+Yönetim paneli (`/yonetim`):
+- Sadece `yoneticiler` tablosundaki e-postalar girebilir (şu an mrtandempilot@gmail.com ve hakan.cvsoglu@gmail.com). Yeni yönetici: Supabase → yoneticiler tablosuna e-posta ekle.
+- Özet, Talepler (formdan gelenler; ara / WhatsApp / durum / sil), Aboneler (ekle, +1 ay uzat, düzenle, sil), Üyeler (kayıtlı hesaplar, tek tıkla abone yap).
+- Yetkiler veritabanında (RLS) kontrol edilir; sayfa Google'a kapalı.
+
 SEO:
 - Başlık/açıklama/OG/canonical: `app/layout.js`. Yapılandırılmış veri (LocalBusiness, Person, Course): `lib/seo.js`. SSS şeması: `components/Faq.js`.
 - `robots.txt`, `sitemap.xml`, favicon (`app/icon.svg`) ve paylaşım görseli (`app/opengraph-image.jpg`) otomatik.

@@ -12,10 +12,12 @@ export default function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [abonelik, setAbonelik] = useState(null); // { paket, bitis } | null
   const [ready, setReady] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
   const [modal, setModal] = useState(null); // null | "giris" | "kayit" | "hesap"
 
   const loadAbonelik = useCallback(async (u) => {
-    if (!u?.email) return setAbonelik(null);
+    if (!u?.email) { setIsAdmin(false); return setAbonelik(null); }
+    supabase.rpc("is_admin").then(({ data }) => setIsAdmin(!!data));
     const { data } = await supabase.from("aboneler").select("paket, bitis").eq("email", u.email.toLowerCase()).maybeSingle();
     setAbonelik(data || null);
   }, []);
@@ -47,7 +49,7 @@ export default function AuthProvider({ children }) {
   const aktifAbone = !!abonelik && abonelik.bitis >= today();
 
   const value = {
-    user, abonelik, aktifAbone, ready,
+    user, abonelik, aktifAbone, ready, isAdmin,
     openAuth: (mode = "giris") => setModal(mode),
     openAccount: () => setModal("hesap"),
     closeModal: () => setModal(null),
