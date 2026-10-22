@@ -1,6 +1,7 @@
 import { Archivo } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/data";
+import AuthProvider from "@/components/AuthProvider";
 
 const archivo = Archivo({ subsets: ["latin", "latin-ext"], axes: ["wdth"], display: "swap" });
 
@@ -12,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="tr" className={archivo.className}>
-      <body>{children}</body>
+      <body><AuthProvider>{children}</AuthProvider></body>
     </html>
   );
 }
